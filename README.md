@@ -15,8 +15,11 @@ install zsh
 install oh-my-zsh
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
-Then edit your ~/.zshrc and set ZSH_THEME="powerlevel10k/powerlevel10k".
-Also add the following: POWERLEVEL9K_MODE="awesome-patched"
+Then edit your ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k".
+POWERLEVEL9K_MODE="awesome-patched"
+DEFAULT_USER=`whoami`
+
 
 # tmux
 cp .tmux.conf
