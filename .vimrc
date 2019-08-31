@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 set nu
 
+set backspace=2
 syntax on
 
 filetype off                  " required
