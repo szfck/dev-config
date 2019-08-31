@@ -13,12 +13,21 @@ iTerm2 (iTerm → Preferences → Profiles → Text → Change Font) [SourceCode
 # oh-my-zsh
 install zsh
 install oh-my-zsh
+
+# Auto suggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+plugins=(zsh-autosuggestions)
+
+# Syntax highlighting
+brew install zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# theme
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
 Then edit your ~/.zshrc
-
 ZSH_THEME="powerlevel10k/powerlevel10k".
-# POWERLEVEL9K_MODE="awesome-patched"
+POWERLEVEL9K_MODE="awesome-patched"
+
 DEFAULT_USER=`whoami`
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 alias d="dirs -v | head -10"
