@@ -16,9 +16,21 @@ install oh-my-zsh
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 Then edit your ~/.zshrc
+
 ZSH_THEME="powerlevel10k/powerlevel10k".
-POWERLEVEL9K_MODE="awesome-patched"
+# POWERLEVEL9K_MODE="awesome-patched"
 DEFAULT_USER=`whoami`
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+alias d="dirs -v | head -10"
+1='cd -'
+2='cd -2'
+3='cd -3'
+4='cd -4'
+5='cd -5'
+6='cd -6'
+7='cd -7'
+8='cd -8'
+9='cd -9'
 
 
 # tmux
