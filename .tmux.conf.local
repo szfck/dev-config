@@ -295,6 +295,7 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 tmux_conf_theme_status_left='  #S | '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}, %R , %d %b |'
 tmux_conf_theme_status_left_bg='#00afff,#00afff,#00afff'
 set-option -g repeat-time 1
 set-option -g status-position top
