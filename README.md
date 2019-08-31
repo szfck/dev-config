@@ -18,9 +18,9 @@ install zsh-autosuggestions
 install zsh-syntax-highlighting
 
 # theme
-git clone https://github.com/romkatv/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 Then edit your ~/.zshrc
-ZSH_THEME="powerlevel9k/powerlevel9k".
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 DEFAULT_USER=`whoami`
 alias d="dirs -v | head -10"
