@@ -68,7 +68,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER=`whoami`
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 alias d="dirs -v | head -10"
 1='cd -'
 2='cd -2'
