@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+DEFAULT_USER=`whoami`
+
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 alias d="dirs -v | head -10"
 1='cd -'
