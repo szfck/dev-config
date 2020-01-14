@@ -113,3 +113,17 @@ alias d="dirs -v | head -10"
 8='cd -8'
 9='cd -9'
 PS1='%{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info) '
+
+alias down="hg co .^"
+alias up="hg co .~-1"
+alias hg-status-changes="hg status --rev .^"
+alias hg-diff-changes="hg diff --rev .^"
+alias cg="hg status --rev .^"
+alias cgg="hg status --rev .^ && hg diff --rev .^"
+alias df="hg status --rev ."
+alias dff="hg status --rev . && hg diff --rev ."
+alias book="hg book"
+alias sl="hg sl"
+move() {
+	hg rebase -s "$1" -d "$2"
+}
