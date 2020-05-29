@@ -1,6 +1,6 @@
 # Linux
 ```
-bash <(curl https://raw.githubusercontent.com/szfck/dev-config/master/.install.sh)
+bash <(curl https://raw.githubusercontent.com/szfck/dev-config/master/install.sh)
 ```
 
 # Mac iterm2 and color
