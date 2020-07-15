@@ -1,5 +1,5 @@
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-rpm -ivh epel-release* -y
+rpm -ivh epel-release*
 
 
 cmd="apt-get"
@@ -113,5 +113,5 @@ EOL
 install
 
 # # firewalld放行端口（适用于CentOS7/8）
-# firewall-cmd --permanent --add-port=600001/udp # mosh port
-# firewall-cmd --reload
+firewall-cmd --permanent --add-port=600001/udp # mosh port
+firewall-cmd --reload
