@@ -1,5 +1,5 @@
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-rpm -ivh epel-release*
+rpm -ivh epel-release* -y
 
 
 cmd="apt-get"
