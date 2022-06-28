@@ -140,23 +140,23 @@ return require("packer").startup(function(use)
     end,
   })
 
-  use("neovim/nvim-lspconfig")
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = "all",
-        highlight = {
-          enable = true,
-          disable = { "latex" },
-        },
-        indent = {
-          enable = true,
-          disable = { "python", "lua", "latex" },
-        },
-      })
-    end,
-  })
+  -- use("neovim/nvim-lspconfig")
+  -- use({
+  --   "nvim-treesitter/nvim-treesitter",
+  --   config = function()
+  --     require("nvim-treesitter.configs").setup({
+  --       ensure_installed = "all",
+  --       highlight = {
+  --         enable = true,
+  --         disable = { "latex" },
+  --       },
+  --       indent = {
+  --         enable = true,
+  --         disable = { "python", "lua", "latex" },
+  --       },
+  --     })
+  --   end,
+  -- })
 --[[
   use("nvim-treesitter/nvim-treesitter-textobjects")
   use({
@@ -415,3 +415,4 @@ return require("packer").startup(function(use)
     require("packer").sync()
   end
 end)
+
