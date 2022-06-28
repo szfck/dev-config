@@ -157,6 +157,7 @@ return require("packer").startup(function(use)
       })
     end,
   })
+--[[
   use("nvim-treesitter/nvim-treesitter-textobjects")
   use({
     "jose-elias-alvarez/null-ls.nvim",
@@ -168,7 +169,7 @@ return require("packer").startup(function(use)
       vim.g.vista_default_executive = "nvim_lsp"
     end,
   })
-
+--]]
   use("L3MON4D3/LuaSnip")
 
   use({
