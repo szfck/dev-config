@@ -5,7 +5,6 @@ apt install -y vim curl git tmux zsh software-properties-common
 
 
 # tmux
-cd ~
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
@@ -28,22 +27,16 @@ cat /tmp/append.txt >> .tmux.conf.local
 sh -c "$(curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # plugin
-cd ~
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # ~/.zshrc
-cat > /tmp/append.txt <<- EOM
 plugins=(
 zsh-syntax-highlighting
 zsh-autosuggestions
 )
-EOM
-cat /tmp/append.txt >> ~/.zshrc
-source ~/.zshrc
 
 # neovim
-cd ~
 git clone https://github.com/neovim/neovim
 apt install -y pkg-config make cmake g++ unzip libtool-bin gettext
 
@@ -61,7 +54,6 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 nvim --headless -c 'TSUpdate' -c 'qall'
 
 # entr
-cd ~
 git clone https://github.com/eradman/entr
 cd entr
 ./configure
@@ -74,7 +66,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "PATH=\$PATH:$HOME/.cargo/bin" >> ~/.zshrc
 
 # leetup
-cd ~
 git clone https://github.com/dragfire/leetup
 cd leetup
 cargo build 
