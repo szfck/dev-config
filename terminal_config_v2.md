@@ -72,5 +72,9 @@ cd leetup
 cargo build 
 echo "PATH=\$PATH:$HOME/leetup/target/debug" >> ~/.zshrc
 
+# nodejs
+apt install -y nodejs npm
+npm install -g leetcode-cli
+
 ```
 
