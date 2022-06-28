@@ -1,10 +1,11 @@
 ```
 # ubuntu docker
 apt update
-apt install -y vim curl git tmux zsh software-properties-common
+apt install -y vim curl wget git tmux zsh software-properties-common
 
 
 # tmux
+cd ~
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
@@ -69,5 +70,7 @@ echo "PATH=\$PATH:$HOME/.cargo/bin" >> ~/.zshrc
 git clone https://github.com/dragfire/leetup
 cd leetup
 cargo build 
+echo "PATH=\$PATH:$HOME/leetup/target/debug" >> ~/.zshrc
+
 ```
 
