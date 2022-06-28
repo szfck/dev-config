@@ -11,6 +11,7 @@ ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
 # append to .tmux.conf.local
+cat > /tmp/append.txt <<- EOM
 set-option -g repeat-time 1
 set-option -g default-shell /usr/bin/zsh
 tmux_conf_theme_status_left='  #S | '                                                                                                             
@@ -19,6 +20,9 @@ tmux_conf_theme_status_left_bg='#00afff,#00afff,#00afff'
 set-option -g status-position bottom  
 set-option -g repeat-time 1  
 set-window-option -g mode-keys vi
+EOM
+
+cat /tmp/append.txt >> .tmux.conf.local
 
 # on-my-zsh
 sh -c "$(curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -29,10 +33,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # ~/.zshrc
+cat > /tmp/append.txt <<- EOM
 plugins=(
 zsh-syntax-highlighting
 zsh-autosuggestions
 )
+EOM
+cat /tmp/append.txt >> ~/.zshrc
+source ~/.zshrc
 
 # neovim
 cd ~
