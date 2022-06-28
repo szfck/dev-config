@@ -2,6 +2,7 @@
 # ubuntu docker
 apt update
 apt install -y vim curl git tmux zsh software-properties-common
+cd ~
 
 # tmux
 git clone https://github.com/gpakosz/.tmux.git
