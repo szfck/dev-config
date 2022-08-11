@@ -370,7 +370,7 @@ return require("packer").startup(function(use)
     end,
   })
 
-  use("ggandor/lightspeed.nvim")
+  -- use("ggandor/lightspeed.nvim")
 
   use("tpope/vim-commentary")
   use("tpope/vim-surround")
