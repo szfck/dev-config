@@ -3,6 +3,8 @@
 apt update
 apt install -y vim curl wget git tmux zsh software-properties-common
 
+# ubuntu docker ~/.zshrc to solve repeated characters (https://github.com/ohmyzsh/ohmyzsh/issues/7426#issuecomment-658833006)
+export LANG=C.UTF-8
 
 # tmux
 cd ~
