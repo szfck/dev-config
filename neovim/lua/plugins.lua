@@ -410,6 +410,7 @@ return require("packer").startup(function(use)
 
   -- use 'mfussenegger/nvim-dap'
   -- use 'williamboman/nvim-lsp-installer'
+  use "Pocco81/AutoSave.nvim"
 
   if packer_bootstrap then
     require("packer").sync()
