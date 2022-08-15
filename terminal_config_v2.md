@@ -6,6 +6,7 @@ apt install -y vim curl wget git tmux zsh software-properties-common
 # ubuntu docker ~/.zshrc to solve repeated characters (https://github.com/ohmyzsh/ohmyzsh/issues/7426#issuecomment-658833006)
 export LANG=C.UTF-8
 
+
 # tmux
 cd ~
 git clone https://github.com/gpakosz/.tmux.git
@@ -78,5 +79,6 @@ echo "PATH=\$PATH:$HOME/leetup/target/debug" >> ~/.zshrc
 apt install -y nodejs npm
 npm install -g leetcode-cli
 
+# iterm2 highlight on current line: option + cmd + ;
 ```
 
