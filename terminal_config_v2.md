@@ -48,14 +48,22 @@ cd neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 make install
 
-mkdir -p ~/.config/nvim/lua
-curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/init.lua > ~/.config/nvim/init.lua
-curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/mappings.lua > ~/.config/nvim/lua/mappings.lua
-curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/options.lua > ~/.config/nvim/lua/options.lua
-curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/plugins.lua > ~/.config/nvim/lua/plugins.lua
+
+
+#mkdir -p ~/.config/nvim/lua
+#curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/init.lua > ~/.config/nvim/init.lua
+#curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/mappings.lua > ~/.config/nvim/lua/mappings.lua
+#curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/options.lua > ~/.config/nvim/lua/options.lua
+#curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/lua/plugins.lua > ~/.config/nvim/lua/plugins.lua
+# nvim --headless -c 'TSUpdate' -c 'qall'
+
+curl https://raw.githubusercontent.com/szfck/dev-config/master/neovim/init.lua.all > ~/.config/nvim/init.lua
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-nvim --headless -c 'TSUpdate' -c 'qall'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerUpdate'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerInstall'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # entr
 git clone https://github.com/eradman/entr
