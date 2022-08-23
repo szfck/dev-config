@@ -8,6 +8,9 @@ vim.api.nvim_set_keymap(
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.g.interestingWordsGUIColors = { '#BCCBEA', '#FFB3FF', '#FF0000', '#00ffff', '#99ff66', '#ff99cc', '#cc0000', '#ffff99', '#660066', '#339966' }
+
 local opt = vim.opt
 
 opt.number = true -- show line numbers
