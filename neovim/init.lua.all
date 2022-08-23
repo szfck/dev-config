@@ -328,6 +328,11 @@ return require("packer").startup(function(use)
       })
     end,
   })
+  
+  use({
+    "hrsh7th/cmp-buffer",
+    after = "nvim-cmp",
+  })
 
   if packer_bootstrap then
     require("packer").sync()
