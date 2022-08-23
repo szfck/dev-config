@@ -1,4 +1,4 @@
-- set leader to <Space>
+-- set leader to <Space>
 vim.api.nvim_set_keymap(
   "",
   "<Space>",
