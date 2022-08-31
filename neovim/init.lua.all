@@ -6,6 +6,51 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+vim.api.nvim_set_keymap(
+  "i",
+  "<C-S>",
+  "<ESC>:w<cr>",
+  { noremap = true, silent = true }
+)
+
+
+-- F1
+vim.api.nvim_set_keymap(
+  "i",
+  "<F1>",
+  "<ESC>:w<cr>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<F1>",
+  "<ESC>:w<cr>",
+  { noremap = true, silent = true }
+)
+
+
+-- F2
+vim.api.nvim_set_keymap(
+  "",
+  "<F2>",
+  "<ESC>:w<cr>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "i",
+  "<F2>",
+  "<ESC>:w<cr>",
+  { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-S>",
+  ":w<cr>",
+  { noremap = true, silent = true }
+)
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -27,6 +72,7 @@ vim.cmd([[
 ]])
 
 opt.showmatch = true -- show matching brackets
+opt.foldmethod = "syntax"
 
 opt.smartindent = true -- use c-like indents when no indentexpr is used
 opt.expandtab = true -- use spaces instead of tabs
