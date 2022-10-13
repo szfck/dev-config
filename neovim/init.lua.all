@@ -383,6 +383,13 @@ return require("packer").startup(function(use)
     after = "nvim-cmp",
   })
 
+  use({
+    "Pocco81/auto-save.nvim",
+    require("auto-save").setup({
+        enabled = true,
+    })
+  })
+
   if packer_bootstrap then
     require("packer").sync()
   end
